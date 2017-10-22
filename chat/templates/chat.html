@@ -37,7 +37,7 @@
                     socket.onclose = function () {
                         alert("接続が終了しました。");
                     }
-                    socket.onmessage = function (ev) {
+                    socket.onmessage = function (e) {
                         messages.append($("<li>").text(e.data));
                     }
                 }

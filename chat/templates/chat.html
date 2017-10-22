@@ -28,12 +28,12 @@
                     }
                     socket.send(msgBox.val());
                     msgBox.val("");
-                    return false
+                    return false;
                 });
                 if (!window["WebSocket"]) {
                     alert("エラー: WebSocketに対応していないブラウザです。")
                 } else {
-                    socket = new WebSocket("ws://localhost:8080/room");
+                    socket = new WebSocket("ws://{{.Host}}/room");
                     socket.onclose = function () {
                         alert("接続が終了しました。");
                     }
